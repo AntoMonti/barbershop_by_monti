@@ -1,0 +1,8 @@
+<%= image_tag(@barber.photo) %>
+<%= @barber.name %>
+<%= @barber.profession %>
+<%= @barber.bio %>
+
+<%= link_to 'Back', barbers_path %>|
+<%= link_to 'Edit', edit_barber_path(@barber) %>|
+<%= link_to 'Destroy', barber_path(@barber), method: :delete, data: {confirm: 'Are you sure?'} %>
