@@ -1,0 +1,8 @@
+<% @barbers.each do |barber| %>
+
+	<%= link_to image_tag(barber.photo), barber_path(barber) %>
+	<%= barber.name %>
+	<%= barber.profession %>
+	<%= barber.bio %>
+
+<% end %> 
