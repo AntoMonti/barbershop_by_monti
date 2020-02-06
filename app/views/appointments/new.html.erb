@@ -1,0 +1,37 @@
+<%= form_for :appointment, url: appointments_path do |f| %>
+	
+	<% if @appointment && @appointment.errors.any? %>
+		<p>
+			<ul>
+				<% @appointment.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+				<% end %>
+			</ul>	
+		</p>
+	<% end %>
+
+	<p>
+		<%= f.label :name %><br>
+		<%= f.text_field :name %>
+	</p>
+
+	<p>
+		<%= f.label :phone %><br>
+		<%= f.text_field :phone %>
+	</p>
+
+	<p>
+		<%= f.label :barber %><br>
+		<%= f.select(:barber, options_for_select(['Anybody', 'Lisa', 'Mona', 'Kate'])) %>
+	</p>
+
+	<p>
+		<%= f.label :datetime %><br>
+		<%= f.text_field :datetime %>
+	</p>
+
+	<p>
+		<%= f.submit 'Send Message' %> 
+	</p>
+
+<% end %>
