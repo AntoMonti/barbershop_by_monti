@@ -1,27 +1,49 @@
 <%= form_with model: @barber, local: true do |form| %>
-
-<p>
-	<%= form.label :photo %><br>
-	<%= form.file_field :photo %>
-</p>
-
-<p>
-	<%= form.label :name %><br>
-	<%= form.text_field :name %>
-</p>
-
-<p>
-	<%= form.label :profession %><br>
-	<%= form.text_field :profession %>
-</p>
-
-<p>
-	<%= form.label :bio %><br>
-	<%= form.text_area :bio %>
-</p>
-
-<p>
-	<%= form.submit 'Create barber' %>
-</p>
-
+ <section class="page-section cta">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <div class="cta-inner text-center rounded">
+              <h2 class="section-heading mb-5">
+                <span class="section-heading-upper">Create Barbie</span>
+                <span class="section-heading-lower">Create new</span>
+              </h2>
+            </div>
+            <form name="sentMessage" id="contactForm" novalidate>
+          	<div class="control-group">
+          		<div class="form-group floating-label-form-group controls">
+          			<label>Photo</label>
+					<%= form.file_field :photo %>
+				</div>
+            		<div class="form-group floating-label-form-group controls">
+					<label>Name</label>
+              			<%= form.text_field :name, class: "form-control", placeholder: "Name...", id: "name" %>
+              		<p class="help-block text-danger"></p>
+            		</div>
+          		</div>
+		          <div class="control-group">
+		            <div class="form-group floating-label-form-group controls">
+		              <label>Profession</label>
+		              <%= form.text_field :profession, class: "form-control", placeholder: "Profession...", id: "name" %>
+		              <p class="help-block text-danger"></p>
+		            </div>
+		          </div>
+		          <div class="control-group">
+		            <div class="form-group floating-label-form-group controls">
+		              <label>Bio</label>
+		              <%= form.text_area :bio, textarea_rows: "5", class: "form-control", placeholder: "Bio...", id: "message" %>
+		              <p class="help-block text-danger"></p>
+		            </div>
+		          </div>
+		          
+		          <br>
+		          <div id="success"></div>
+		          <div class="form-group">
+		            <%= form.submit 'Create Barber', class: "btn btn-primary", id: "sendMessageButton" %>
+		          </div>
+		       </form>
+          </div>
+        </div>
+      </div>
+    </section>	
 <% end %>
