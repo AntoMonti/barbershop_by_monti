@@ -1,8 +1,22 @@
 <% @barbers.each do |barber| %>
-
-	<%= link_to image_tag(barber.photo), barber_path(barber) %>
-	<%= barber.name %>
-	<%= barber.profession %>
-	<%= barber.bio %>
-
-<% end %> 
+<section class="page-section">
+    <div class="container">
+      <div class="product-item">
+        <div class="product-item-title d-flex">
+          <div class="bg-faded p-5 d-flex ml-auto rounded">
+            <h2 class="section-heading mb-0">
+              <span class="section-heading-upper"><%= barber.profession %></span>
+              <span class="section-heading-lower"><%= barber.name %></span>
+            </h2>
+          </div>
+        </div>
+        <%= image_tag(barber.photo, class: "product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0") %>
+        <div class="product-item-description d-flex mr-auto">
+          <div class="bg-faded p-5 rounded">
+            <p class="mb-0"><%= barber.bio %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<% end %>
