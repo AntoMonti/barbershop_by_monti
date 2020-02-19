@@ -37,11 +37,7 @@
             		</div>
           		</div>
 		          <div class="control-group">
-                <div class="form-group floating-label-form-group controls">
-                <label>Barber</label><br>
-		              <%= f.select(:barber, options_for_select(['Anybody', 'Lisa', 'Mona', 'Kate'])) %>
-                  <p class="help-block text-danger"></p>
-                  </div>            
+		              <%= f.select :barber, options_for_select(['Any barber', 'Lisa', 'Mona', 'Kate']) %>          
 		          </div>
 		           <div class="control-group">
             		<div class="form-group floating-label-form-group controls">
