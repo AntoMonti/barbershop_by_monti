@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_06_130046) do
+ActiveRecord::Schema.define(version: 2020_04_08_193758) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -43,7 +43,6 @@ ActiveRecord::Schema.define(version: 2020_02_06_130046) do
   end
 
   create_table "barbers", force: :cascade do |t|
-    t.binary "photo"
     t.string "name"
     t.string "profession"
     t.text "bio"
